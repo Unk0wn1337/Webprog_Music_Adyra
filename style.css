@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    font-family: 'Calibri', Garamond, 'Comic Sans MS';
+    font-size: 15px;
+}
+
+body {
+    background-image: url(source/bliss.jpg);
+    background-size: cover;
+    max-width: 800px;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    
+}
+main {
+    display: grid;
+    grid-template-areas: "n n n"
+                         "h h h" 
+                         "as as as"
+                         "a a a"
+                         "f f f";
+    background-color: #dccc9d;
+    border: solid 1px black    
+}
+    
+
+nav {
+    grid-area: n;
+    margin-top: 3px;
+    background-image: url(source/kepek/bg-nav.png);
+    background-size: cover;
+    border-radius: 1%;
+    border: solid 2px #999658;
+    
+    
+}
+nav ul { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+nav ul li {
+    list-style-type: none;
+    text-align: center;
+    height: 45px;
+
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-family: 'Margarine',cursive;
+    text-transform: uppercase;
+}
+nav ul li a:hover {
+    color: red;
+}
+
+
+
+header {
+    grid-area: h;
+    height: 400px;
+    background-image: url(source/kepek/zkar_header.jpg);
+    background-size: cover;
+    border-radius: 1%;
+    border: solid 2px #999658;
+    
+}
+
+aside {
+    grid: as;
+}
+
+aside h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: cyan;
+    text-shadow: 2px 2px black;
+    margin-left: 10px;
+}
+aside p {
+    height: 100%;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+article {
+    grid-area: a;
+}
+
+.szoveg h3 {
+    border-style: dotted;
+    color: cyan;
+    font-size: 30px;
+    text-shadow: 2px 2px black;
+}
+.szoveg {
+    margin-left: 10px;
+    font-size: 10px;
+}
+.szoveg ul {
+    margin-left: 10px;
+}
+.szoveg ul li{
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+
+.kep {
+    margin-left: 100px;
+}
+
+footer {
+    grid-area: f;
+}
+.szovegKepContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 716px) {
+    * {
+       
+        font-size: 12px;
+    }
+    
+    main {
+        display: grid;
+        grid-template-areas: "n"
+                             "h" 
+                             "as"
+                             "a"
+                             "f";
+        background-color: #dccc9d;
+        border: solid 1px black;
+        
+    }
+    nav ul { 
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .szovegKepContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+    } 
+  
+  }
+
